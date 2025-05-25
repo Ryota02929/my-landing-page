@@ -591,20 +591,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* ========== 編集可能エリア ========== */
-        .editable {
-            position: relative;
-        }
-
-        .editable::after {
-            content: '✏️';
-            position: absolute;
-            top: -5px;
-            right: -25px;
-            opacity: 0.3;
-            font-size: 0.8rem;
-        }
     </style>
 </head>
 
@@ -619,14 +605,14 @@
         <div class="container">
             <div class="hero-content">
                 <p class="hero-catch">退職を考えているけれど、不安で踏み出せない方へ</p>
-                <h1>安心して次のステップへ<br><span class="hero-highlight editable">退職～転職</span><br>総合サポート</h1>
+                <h1>安心して次のステップへ<br><span class="hero-highlight">退職～転職</span><br>総合サポート</h1>
                 <p class="subtitle">
                     <strong>退職から転職、各種給付金申請まで完全サポート。</strong><br>
                     行政書士・社労士・キャリアアドバイザーと提携した専門チームが、<br>
                     あなたの新しいキャリアを全面的にサポートします。
                 </p>
                 <p class="hero-limited">※ 月10名様限定のため、お早めにお申し込みください</p>
-                <button class="cta-button-hero" onclick="scrollToContact()">
+                <button class="cta-button-hero" onclick="window.open('https://timerex.net/s/ryo.ryo.tt29_1adb/2d6b2163', '_blank')">
                     無料相談に申し込む
                 </button>
             </div>
@@ -733,7 +719,7 @@
                         </svg>
                     </div>
                     <h3>転職・キャリア支援</h3>
-                    <p>給付金サポートだけでなく、<span class="editable">グループ企業</span>での転職支援も可能。<br><strong>トータルでのキャリアアップを実現</strong>します。</p>
+                    <p>給付金サポートだけでなく、グループ企業での転職支援も可能。<br><strong>トータルでのキャリアアップを実現</strong>します。</p>
                 </div>
             </div>
         </div>
@@ -924,7 +910,7 @@
                     <strong>一人で悩まず、専門家にご相談ください。</strong><br>
                     あなたの状況に合わせた最適なプランをご提案します。
                 </p>
-                <a href="#" class="cta-button-large editable">
+                <a href="https://timerex.net/s/ryo.ryo.tt29_1adb/2d6b2163" class="cta-button-large" target="_blank">
                     今すぐ無料相談を申し込む
                 </a>
             </div>
@@ -934,7 +920,7 @@
     <!-- フッター -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 <span class="editable">退職サポート</span>. All rights reserved.</p>
+            <p>&copy; 2024 退職サポート. All rights reserved.</p>
         </div>
     </footer>
 
@@ -952,34 +938,6 @@
                 }
             });
         }
-
-        // スムーススクロール
-        function scrollToContact() {
-            document.getElementById('contact').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // 編集可能エリアのクリックイベント
-        document.addEventListener('DOMContentLoaded', function() {
-            const editableElements = document.querySelectorAll('.editable');
-            editableElements.forEach(element => {
-                element.addEventListener('click', function() {
-                    this.contentEditable = true;
-                    this.focus();
-                    this.style.backgroundColor = '#fff3cd';
-                    this.style.padding = '2px 4px';
-                    this.style.borderRadius = '3px';
-                });
-                
-                element.addEventListener('blur', function() {
-                    this.contentEditable = false;
-                    this.style.backgroundColor = '';
-                    this.style.padding = '';
-                    this.style.borderRadius = '';
-                });
-            });
-        });
 
         // イベントリスナー
         window.addEventListener('scroll', handleScrollAnimation);
